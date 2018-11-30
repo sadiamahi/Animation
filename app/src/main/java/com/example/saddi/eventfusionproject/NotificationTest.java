@@ -116,7 +116,7 @@ public class NotificationTest extends AppCompatActivity {
                 .setAutoCancel(true)
                 .setDefaults(NotificationCompat.DEFAULT_ALL);
         Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse("www.google.com"));
-        PendingIntent pendingIntent=PendingIntent.getActivities(this,0,intent,0);
+        PendingIntent pendingIntent=PendingIntent.getActivity(this,0,intent,0);
         builder.addAction(R.drawable.icon,"view",pendingIntent);
         Uri path= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         builder.setSound(path);
